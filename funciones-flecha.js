@@ -27,9 +27,10 @@ console.log(fucn1(1,5,8));
 console.log(fucn2(2));
 */
 const sum =(x,y) => x + y;
-console.log(sum(x:3, y:6));
+console.log(sum(x=3, y=6));
 
-function f(x,y:number=5){
+function f(x,y=number=5){
     return[x,y];
 }
-console.log(f(x:1));
+console.log(f(x=1));
+//Ejemplo
