@@ -25,7 +25,7 @@ const fucn1= () => ({a=1});
 const fucn2= () => {a=1};
 console.log(fucn1(1,5,8));
 console.log(fucn2(2));
-*/
+
 const sum =(x,y) => x + y;
 console.log(sum(x=3, y=6));
 
@@ -33,4 +33,20 @@ function f(x,y=number=5){
     return[x,y];
 }
 console.log(f(x=1));
+*/
 //Ejemplo
+function promedio(x , y ) {
+    return (x + y) / 2;
+}
+console.log(promedio(4,3));
+
+function usuario(name, age) {
+    return {
+      name: name,
+      age: age,
+      // ...otras propiedades
+    };
+  }
+  
+  let user = usuario("John", 30);
+  alert(user.name);
