@@ -49,4 +49,4 @@ function usuario(name, age) {
   }
   
   let user = usuario("John", 30);
-  alert(user.name);
+  console.log(user.name);
