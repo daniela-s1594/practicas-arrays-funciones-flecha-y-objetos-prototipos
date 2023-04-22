@@ -41,6 +41,7 @@ function atenderCola() {
   console.log(cola);
 }
 setInterval(atenderCola, 5000);
+// clearInterval();Para detener la iteracion 
 
 // let minuto = 0;
 // let segundo = 0;
