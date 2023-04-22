@@ -1,13 +1,93 @@
 // Ejercicio 1:
 // Construya un algoritmo con JavaScript” para las estadísticas de atención de una
 // universidad teniendo en cuenta los siguientes requisitos:
-// 1. Hay dos módulos de atención: terminal para llamada telefónica y oficina.
+// 1. Hay dos módulos de atención: terminal para llamada telefonica y oficina.
 // 2. El sistema brinda las estadísticas de todo el proceso de atención:
 //  Cantidad de usuarios atendidos.
 //  Atendidos por día y especificación por segmento (Estudiante – docente) en
 // cada uno de los módulos de atención.
 //  Se permite trasferir de módulo de atención y se debe generar estadística de
 // esta trasferencia.
+let oficina = [
+  {
+    Docentes: 0,
+  },
+  {
+    Estudiante: 0,
+  },
+];
+let telefonica = [
+  {
+    Docentes: 0,
+  },
+  {
+    Estudiante: 0,
+  },
+];
+let transferencia = [
+  {
+    Docentes: 0,
+  },
+  {
+    Estudiante: 0,
+  },
+];
+let opcion = pedirDatos(
+  "Que eres?(Escribe el texto) \n 1.Estudiante \n 2.Docente"
+);
+function pedirDatos(mensaje) {
+  return prompt(mensaje);
+}
+function usuario(opcion) {
+  switch (opcion) {
+    case "Estudiante":
+      let opcion2 = pedirDatos(
+        "Que servicio desea?(Escribe el texto) \n1.Terminal telefonica \n2.Oficina"
+      );
+      switch (opcion2) {
+        case "Terminal telefonica":
+          telefonica.Estudiante += 1;
+          break;
+
+        default:
+          console.log("Ingrese datos validos");
+          break;
+        case "Oficina":
+          telefonica.Estudiante += 1;
+
+          break;
+      }
+      break;
+    case "Docente":
+      let opcion3 = pedirDatos(
+        "Que servicio desea?(Escribe el texto) \n1.Terminal telefonica \n2.Oficina"
+      );
+      switch (opcion3) {
+        case "Terminal telefonica":
+          telefonica.Docentes += 1;
+          break;
+
+        default:
+          console.log("Ingrese datos validos");
+          break;
+        case "Oficina":
+          let opcion4 = pedirDatos(
+            "Desea que lo transfiera a Terminal telefonica?(Escribe el texto) \n1.Si\n2.No "
+          );
+          if ((opcion4 = Si)) {
+            telefonica.Docentes += 1;
+          } else {
+            oficina.Docentes += 1;
+          }
+          break;
+      }
+  }
+}
+console.log(
+  `La oficina atendio ${oficina.Docentes} por este día,La terminal telefonica atendio ${telefonica} por este día y se dieron un total de ${transferencia} transferencias`
+);
+
+usuario(opcion)
 // Ejercicio 2:
 // El software que se desarrollará controlará un cajero automático (ATM) a través de una
 // simulación usando el lenguaje de programación JavaScript.
@@ -39,6 +119,7 @@
 // de tres intentos saldrá de la aplicación.
 //  El cajero automático tendrá un panel de operador con un interruptor que
 // permitirá apagar o encender el cajero.
+
 // Ejercicio 3:
 //  Desarrollar en JavaScript un programa para la gestión reservas de un hotel,
 // el cual, debe tener las siguientes características y consideraciones:
@@ -52,6 +133,7 @@
 //  El hotel necesita una estadística de las reservas: nombre de quien reserva,
 // país de origen, número de personas, el periodo de la estadía, número de
 // personas que están ocupando el hotel y si el huésped trajo mascota.
+
 // Ejercicio 4
 // Se necesita simular en JavaScript la atención de clientes a través de la asignación de
 // turnos en un banco. Se debe usar arreglos o objetos dependiendo del algoritmo que
@@ -64,7 +146,6 @@
 
 // El banco cuenta con 5 cajas, de las cuales la 1 y 2 están reservadas para retiros.
 
-
 // Aquellos clientes presenciales se atienden primero de los demás tipos.
 // La caja 5 es solo asesoría.
 //  A medida que se atienden clientes se va liberando las cajas y distribuyendo entre
@@ -76,12 +157,6 @@
 // Atributos:
 
 // Código.
-
-
-
-
-
-
 
 // Descripción.
 // Precio de compra.
@@ -110,7 +185,6 @@
 // Diseñar un programa que:
 
 // Consulte el número de productos de tipo de prendas de vestir a manejar.
-
 
 // Consulte el número de productos de tipo calzado a manejar.
 // Cree en una estructura de datos (arrays, map, set), los productos de prendas de
