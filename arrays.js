@@ -1,11 +1,4 @@
-//let fruits =["Apple","Orange","Plum"];
-// console.log(fruits[1]);
-// fruits[0]="Pear";
-// console.log(fruits);
-
-// console.log(fruits.length);
-// fruits[fruits.length]="Grape";
-// fruits.push("Banana");
+/*
 let personas = ["Juan", "Marta", "Eliana", "Lorena", "Andres"];
 //Agregar
 personas.push("Eliza");
@@ -23,6 +16,7 @@ copy = [...people, ...people2, "Pepe"];
 console.log(copy);
 copy2 = [...people2];
 console.log(copy2);
+
 //iterar
 for (let index = 0; index < copy.length; index++) {
   console.log(copy[index]);
@@ -33,23 +27,32 @@ for (const element of personas.keys()) {
 for (const [i, e] of people2.entries()) {
   console.log(i, e);
 }
+*/
+let cola = [];
+cola.push("Juan");
+cola.push("Maria");
+cola.push("Felipe");
+cola.push("Luis");
+cola.push("Manuel");
+console.log(cola);
 
-const colaBanco = [];
-function armarCola() {
-  for (let index = 0; index < 20; index++) {
-    let nombre = prompt("ingrese su nombre");
-    if (nombre != "") {
-      colaBanco.push(nombre);
-    } else {
-      console.log("ingrese otro nombre");
-    }
-  }
-  for (const [i, e] of colaBanco.entries()) {
-    console.log(i, e);
-  }
+function atenderCola() {
+  cola.shift();
+  console.log(cola);
 }
+setInterval(atenderCola, 5000);
 
-function atencion() {
-  
-}
+// let minuto = 0;
+// let segundo = 0;
 
+// while (True) {
+//   while (minuto < 60) {
+//     while (segundo < 60) {
+//       cola.shift();
+//       segundo = segundo + 1;
+//     }
+//     segundo = 0;
+//     minuto = minuto + 1;
+//   }
+//   minuto = 0;
+// }
