@@ -46,14 +46,14 @@ function usuario(opcion) {
       );
       switch (opcion2) {
         case "Terminal telefonica":
-          telefonica.Estudiante += 1;
+          telefonica.Estudiante++;
           break;
 
         default:
           console.log("Ingrese datos validos");
           break;
         case "Oficina":
-          telefonica.Estudiante += 1;
+          telefonica.Estudiante++;
 
           break;
       }
@@ -64,7 +64,7 @@ function usuario(opcion) {
       );
       switch (opcion3) {
         case "Terminal telefonica":
-          telefonica.Docentes += 1;
+          telefonica.Docentes++;
           break;
 
         default:
@@ -75,9 +75,9 @@ function usuario(opcion) {
             "Desea que lo transfiera a Terminal telefonica?(Escribe el texto) \n1.Si\n2.No "
           );
           if ((opcion4 = Si)) {
-            telefonica.Docentes += 1;
+            telefonica.Docentes++;
           } else {
-            oficina.Docentes += 1;
+            oficina.Docentes++;
           }
           break;
       }
