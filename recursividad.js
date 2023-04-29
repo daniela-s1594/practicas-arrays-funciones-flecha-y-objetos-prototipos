@@ -8,86 +8,53 @@
 // cada uno de los módulos de atención.
 //  Se permite trasferir de módulo de atención y se debe generar estadística de
 // esta trasferencia.
-let oficina = [
+let atencionUniversidad = [
   {
-    Docentes: 0,
-  },
-  {
-    Estudiante: 0,
-  },
-];
-let telefonica = [
-  {
-    Docentes: 0,
-  },
-  {
-    Estudiante: 0,
-  },
-];
-let transferencia = [
-  {
-    Docentes: 0,
-  },
-  {
-    Estudiante: 0,
-  },
-];
-let opcion = pedirDatos(
-  "Que eres?(Escribe el texto) \n 1.Estudiante \n 2.Docente"
-);
-function pedirDatos(mensaje) {
-  return prompt(mensaje);
-}
-function usuario(opcion) {
-  switch (opcion) {
-    case "Estudiante":
-      let opcion2 = pedirDatos(
-        "Que servicio desea?(Escribe el texto) \n1.Terminal telefonica \n2.Oficina"
-      );
-      switch (opcion2) {
-        case "Terminal telefonica":
-          telefonica.Estudiante++;
-          break;
+    nombre:'Juan',
+    tipo:'Docente',
+    modulo:'telefonica',
+    dia:'29',
+    mes:'01',
+    año:'2022'
 
-        default:
-          console.log("Ingrese datos validos");
-          break;
-        case "Oficina":
-          telefonica.Estudiante++;
-
-          break;
-      }
-      break;
-    case "Docente":
-      let opcion3 = pedirDatos(
-        "Que servicio desea?(Escribe el texto) \n1.Terminal telefonica \n2.Oficina"
-      );
-      switch (opcion3) {
-        case "Terminal telefonica":
-          telefonica.Docentes++;
-          break;
-
-        default:
-          console.log("Ingrese datos validos");
-          break;
-        case "Oficina":
-          let opcion4 = pedirDatos(
-            "Desea que lo transfiera a Terminal telefonica?(Escribe el texto) \n1.Si\n2.No "
-          );
-          if ((opcion4 = Si)) {
-            telefonica.Docentes++;
-          } else {
-            oficina.Docentes++;
-          }
-          break;
-      }
+  },
+  {
+    nombre:'Maria',
+    tipo:'Estudiante',
+    modulo:'oficina',
+    dia:'29',
+    mes:'01',
+    año:'2022'
+  },
+  {
+    nombre:'Luis',
+    tipo:'Estudiante',
+    modulo:'telefonica',
+    dia:'10',
+    mes:'02',
+    año:'2022'
+  },
+  {
+    nombre:'Felipe',
+    tipo:'Docente',
+    modulo:'oficina',
+    dia:'10',
+    mes:'02',
+    año:'2022'
+  },
+  {
+    nombre:'Carmen',
+    tipo:'Estudiante',
+    modulo:'oficina',
+    dia:'28',
+    mes:'02',
+    año:'2022'
   }
-}
-console.log(
-  `La oficina atendio ${oficina.Docentes} por este día,La terminal telefonica atendio ${telefonica} por este día y se dieron un total de ${transferencia} transferencias`
-);
-
-usuario(opcion)
+];
+let cantidadAtendidos = atencionUniversidad.length;
+console.log(cantidadAtendidos);
+let diaYSegmento = atencionUniversidad.filter((dia=='29',tipo='Estudiante')) ;
+console.log(diaYSegmento);
 // Ejercicio 2:
 // El software que se desarrollará controlará un cajero automático (ATM) a través de una
 // simulación usando el lenguaje de programación JavaScript.
