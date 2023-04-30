@@ -53,8 +53,10 @@ let atencionUniversidad = [
 ];
 let cantidadAtendidos = atencionUniversidad.length;
 console.log(cantidadAtendidos);
-let diaYSegmento = atencionUniversidad.filter((dia=='29',tipo='Estudiante')) ;
-console.log(diaYSegmento);
+let dia = atencionUniversidad.filter((dia))='29';
+console.log(dia);
+let segmento = atencionUniversidad.filter((tipo))='Estudiante';
+console.log(segmento);
 // Ejercicio 2:
 // El software que se desarrollará controlará un cajero automático (ATM) a través de una
 // simulación usando el lenguaje de programación JavaScript.
